@@ -56,6 +56,13 @@
     - "22"
     - "80"
 
+- name: Allow application access from the host-only network
+  community.general.ufw:
+    rule: allow
+    from_ip: "{{ nginx_client_subnet }}"
+    port: "{{ nginx_external_port }}"
+    proto: tcp
+
 - name: Set incoming firewall policy
   community.general.ufw:
     default: deny

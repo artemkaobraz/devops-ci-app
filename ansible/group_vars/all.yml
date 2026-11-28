@@ -4,3 +4,5 @@ app_tag: "78d1e1c87e35d260847742e6bd10d6ed2b6da7ff"
 app_container_name: "devops-ci-app"
 app_host_port: 5000
 app_internal_port: 5000
+nginx_external_port: 5001
+nginx_client_subnet: "192.168.56.0/24"
